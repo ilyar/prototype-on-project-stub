@@ -1,0 +1,5 @@
+block('copyright')(
+
+    content()((new Date).getFullYear() + ' -- Собственность Барта Симпсона')
+
+)

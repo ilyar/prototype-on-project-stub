@@ -9,13 +9,15 @@
     ],
     content:[
         {
-            block: 'header'
+            block: 'header',
+            title: 'Мой супер сайт'
         },
         {
             block: 'content',
             content: [
                 {
-                    block: 'news'
+                    block: 'news',
+                    count: 10
                 },
                 {
                     block: 'feedback'

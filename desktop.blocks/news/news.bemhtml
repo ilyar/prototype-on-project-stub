@@ -1,0 +1,15 @@
+block('news')(
+
+    content()(function () {
+        var news = [];
+
+        while (this.ctx.count--) {
+            news.push({
+                block: 'article'
+            });
+        }
+
+        return news;
+
+    })
+)

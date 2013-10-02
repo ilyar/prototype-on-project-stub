@@ -1,0 +1,16 @@
+block('header')(
+    content()(
+
+        function () {
+            var content = [];
+
+            content.push({ block: 'logo' });
+
+            content.push({ block: 'title', content: this.ctx.title });
+
+            content.push({ block: 'phone', content: 'телефон: +0 000 000 00 00' });
+
+            return content;
+        }
+    )
+)

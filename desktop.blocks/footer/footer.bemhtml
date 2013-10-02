@@ -1,0 +1,11 @@
+block('footer')(
+
+    content()(
+        [
+            {
+                block: 'copyright'
+            }
+        ]
+    )
+
+)
