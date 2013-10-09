@@ -2,7 +2,7 @@ block('article')(
     content()([
         {
             elem: 'date',
-            content: new Date()
+            content: new Date().getHours()
         },
         {
             elem: 'author',
