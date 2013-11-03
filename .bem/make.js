@@ -1,7 +1,8 @@
 /* jshint node:true */
 /* global MAKE */
 
-require('bem-environ/lib/nodes');
+var environ = require('bem-environ')(__dirname);
+environ.extendMake(MAKE);
 
 //process.env.YENV = 'production';
 //process.env.XJST_ASYNCIFY = 'yes';
@@ -12,8 +13,8 @@ MAKE.decl('Arch', {
     bundlesLevelsRegexp: /^.+?\.bundles$/,
 
     libraries: [
-        'bem-core @ 7584dfc71b5e971a45bf3a3571dcabd39a6a75f0',
-        'bem-components @ 231b03867325a51a33ae6bdd300b12946944a4de'
+        'bem-core @ f4b46ef0590549042d938f7e981df4d14eb4caef',
+        'bem-components @ 82301a8af6c15c2849d1f755a24f594de6522251'
     ]
 
 });
@@ -31,9 +32,6 @@ MAKE.decl('BundleNode', {
             'browser.js+bemhtml',
             'css',
             'ie.css',
-            'ie7.css',
-            'ie8.css',
-            'ie9.css',
             'html'
         ];
 
