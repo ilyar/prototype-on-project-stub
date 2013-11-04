@@ -1,10 +1,10 @@
 {
   "author": "",
-  "name": "bem-project-stub",
+  "name": "prototype-on-project-stub",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bem/project-stub.git"
+    "url": "git://github.com/alexbaumgertner/prototype-on-project-stub"
   },
   "engines": {
     "node": "0.6 | 0.8 | 0.10"
