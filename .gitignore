@@ -1,10 +1,10 @@
-libs/
+project-stub/libs/
 node_modules/
 .DS_Store
 .idea
 .project
 .svn
-.bem/cache/
-*.bundles/*/*.*
-!*.bundles/*/*.bemjson.js
-!*.bundles/.bem/*
+project-stub/.bem/cache/
+project-stub/*.bundles/*/*.*
+!project-stub/*.bundles/*/*.bemjson.js
+!project-stub/*.bundles/.bem/*
