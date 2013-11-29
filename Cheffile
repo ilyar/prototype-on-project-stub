@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'build-essential'
+cookbook 'apt'
+
+cookbook 'nginx'
+
+cookbook 'nodejs'
+cookbook 'npm'
+
+cookbook 'magic_shell'

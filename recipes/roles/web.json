@@ -1,0 +1,22 @@
+{
+    "name":       "backend",
+    "chef_type":  "role",
+    "json_class": "Chef::Role",
+
+    "description": "web server role",
+
+    "default_attributes": {
+
+        "nodejs":  {
+            "install_method": "package",
+            "version":        "0.10.*"
+        }
+    },
+
+    "override_attributes": { },
+
+    "run_list": [
+
+        "recipe[project-stub::default]"
+    ]
+}

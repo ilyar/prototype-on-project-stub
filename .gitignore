@@ -8,3 +8,8 @@ project-stub/.bem/cache/
 project-stub/*.bundles/*/*.*
 !project-stub/*.bundles/*/*.bemjson.js
 !project-stub/*.bundles/.bem/*
+
+/.vagrant/
+/Vagrantfile.local
+recipes/cookbooks/
+recipes/tmp/

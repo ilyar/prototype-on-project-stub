@@ -1,0 +1,6 @@
+vmboxes = {
+  :'dev' => {
+    :hostname => 'project-stub.vrt',
+    :ipaddress => '192.168.56.101',
+  }
+}

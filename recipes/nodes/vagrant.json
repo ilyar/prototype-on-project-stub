@@ -1,0 +1,16 @@
+{
+    "project-stub": {
+        "path":               "/var/www/project-stub",
+        "environment":        "development",
+        "domain":             "project-stub.vrt",
+        "nginx_no_sendfiles": true
+    },
+
+    "nginx": {
+
+    },
+
+    "run_list": [
+        "role[web]"
+    ]
+}
