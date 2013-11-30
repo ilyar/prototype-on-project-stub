@@ -5,3 +5,5 @@
 package "mc"
 package "git"
 package "make"
+
+include_recipe "nodejs"
