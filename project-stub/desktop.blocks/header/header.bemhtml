@@ -10,6 +10,16 @@ block('header')(
 
             content.push({ block: 'phone', content: 'телефон: +0 000 000 00 00' });
 
+            content.push({
+                block: 'menu',
+                items: [
+                    { 'url': '/desktop.bundles/about/about.html', 'title': 'О сайте' },
+                    { 'url': '/desktop.bundles/feedback/feedback.html', 'title': 'Обратная связь' },
+                    { 'url': '/desktop.bundles/index/index.html', 'title': 'Главная' },
+                    { 'url': '/desktop.bundles/portfolio/portfolio.html', 'title': 'Примеры работ' }
+                ]
+            });
+
             return content;
         }
     )

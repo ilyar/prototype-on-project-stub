@@ -9,6 +9,9 @@
         },
         {
             block: 'title'
+        },
+        {
+            block: 'menu'
         }
     ]
 })
