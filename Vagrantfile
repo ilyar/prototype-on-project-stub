@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
     end
   end
 
-  config.vm.synced_folder "./app", "/var/www/project-stub", :create => true
+  config.vm.synced_folder "./project-stub", "/var/www/project-stub", :create => true
 
   config.omnibus.chef_version = :latest
   config.vm.provision :chef_solo do |chef|
