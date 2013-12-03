@@ -11,5 +11,6 @@ depends "apt"
 
 depends "nginx"
 depends "nodejs"
+depends "npm"
 
 depends "magic_shell"
