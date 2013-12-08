@@ -1,9 +1,6 @@
 prototype-on-project-stub
 =========================
 
-prototype-on-project-stub
-=========================
-
 Протопипирование с помощью bemhtml и bemjson на основе <a href="https://github.com/bem/project-stub">project-stub</a>
 
 Используется Vagrant для создания среды разработки, такой же, как и на рабочем сервере.
