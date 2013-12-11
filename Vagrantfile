@@ -1,23 +1,32 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
 $script = <<SCRIPT
-  if [ ! -f /home/vagrant/already-installed ]
-  then
-    sudo npm install -g bem@0.6.16
-    cd project && npm install && bem make libs
-    echo "\n\ncd /home/vagrant/project" >> /home/vagrant/.bashrc
-    date > /home/vagrant/already-installed
-  fi
+  sudo npm install --global --quiet bem-cli
+  echo "alias 'bemcr'='bem create -l desktop.blocks/ -b'" >> /home/vagrant/.bashrc
+  echo "alias 'bempcr'='bem create -l desktop.bundles/ -b'" >> /home/vagrant/.bashrc
+  echo "cd /home/vagrant/project" >> /home/vagrant/.bashrc
+  cd /home/vagrant/project && npm install --quiet --no-bin-links && bem make libs --no-bin-links
   echo "Done!"
 SCRIPT
 
-Vagrant::Config.run do |config|
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-  config.vm.forward_port 8080, 8080
-  config.vm.share_folder "project", "/home/vagrant/project", "."
+  config.vm.network :forwarded_port, guest: 8080, host: 3000
+  config.vm.synced_folder ".", "/home/vagrant/project", :create => true
+
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "256", "--cpus",   "1"]
+  end
 
   config.vm.provision :chef_solo do |chef|
     chef.recipe_url = "https://dl.dropboxusercontent.com/u/252475/cookbooks.tar.gz"
     chef.cookbooks_path = [:vm, "cookbooks"]
+    chef.add_recipe "git"
     chef.add_recipe "nodejs"
     # chef.add_recipe "mongodb-debs"
     # chef.add_recipe "redis-server"

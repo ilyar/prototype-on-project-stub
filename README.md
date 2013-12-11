@@ -1,6 +1,6 @@
 # prototype-on-project-stub
 
-Протопипирование с помощью bemhtml и bemjson на основе <a href="https://github.com/bem/project-stub">project-stub</a>
+Прототипирование с помощью bemhtml и bemjson на основе <a href="https://github.com/bem/project-stub">project-stub</a>
 
 Клонировать и зайти в новый каталог вашего проекта:
 
@@ -17,9 +17,9 @@
     cd my_project
     npm install
 
-Установить глобально bem-tools:
+Установить глобально [bem-cli](http://ru.bem.info/news/bem-cli/):
 
-    npm install -g bem@0.6.16
+    npm install -g bem-cli
 
 ## Рабочие окружение Vagrant
 
