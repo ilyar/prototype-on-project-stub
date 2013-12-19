@@ -1,32 +1,56 @@
-prototype-on-project-stub
-=========================
+# prototype-on-project-stub
 
-Протопипирование с помощью bemhtml и bemjson на основе <a href="https://github.com/bem/project-stub">project-stub</a>
+Прототипирование с помощью bemhtml и bemjson на основе <a href="https://github.com/bem/project-stub">project-stub</a>
 
-После скачивания репозитория, установите необходимые библиотеки командой ```npm i```:
+Клонировать и зайти в новый каталог вашего проекта:
 
-```bash
-prototype-on-project-stub$ npm i
-```
+    git clone https://github.com/alexbaumgertner/project-stub.git my_project
+    cd my_project
 
-И потом  запустите bem-server:
+## Рабочие окружени и зависимости
 
-```bash
-./node_modules/bem/bin/bem server
-```
+Этот шаг можно промустить если будем использовать Vagrant.
+Для работы нам потребуется установленный [Node.js](http://nodejs.org/download/).
 
-Первый запуск склонирует в папку ```libs```
-библиотеки [bem-core](https://github.com/bem/bem-core) и [bem-components](https://github.com/bem/bem-components)
+Зайти в новый каталог вашего проекта и установить необходимые зависимости:
 
-index-страница будет доступна по адресу
-<a href="http://localhost:8080/desktop.bundles/index/index.html">http://localhost:8080/desktop.bundles/index/index.html</a>
+    cd my_project
+    npm install
 
-Контентные картинки хранятся в ```/desktop.bundles/merged/img```.
+Установить глобально [bem-cli](http://ru.bem.info/news/bem-cli/):
+
+    npm install -g bem-cli
+
+## Рабочие окружение Vagrant
+
+Если рабочие окружение настроено и зависимости установлены этот шаг можно пропустить.
+Настройка рабочего окружения с помощью  [Vagrant](http://downloads.vagrantup.com/) на виртуальной машине [VirtualBox](http://www.virtualbox.org) для работы их необходимо установить для вашей операционной системы.
+
+Зайти в новый каталог вашего проекта и запустить виртуальную машину:
+
+    cd my_project
+    vagrant up
+
+Для использования bem-tools заходим в консоль виртуальной машины:
+
+    vagrant ssh
+
+Первый запуск может потребовать длительного время времени, дополнительные команды для управления виртуальной машиной: `vagrant halt` - приостановить,  `vagrant destroy` - удалить.
+
+## Кодим по БЕМу и смотрим результат
+
+Запустить bem-server:
+
+    bem server
+
+Первый запуск склонирует в папку `libs` библиотеки [bem-core](https://github.com/bem/bem-core) и [bem-components](https://github.com/bem/bem-components)
+
+index-страница будет доступна по адресу <a href="http://localhost:8080/desktop.bundles/index/index.html">http://localhost:8080/desktop.bundles/index/index.html</a>
+
+Контентные картинки хранятся в `/desktop.bundles/merged/img`.
 
 Чтобы не копивать их в каждую папку бандла, можно делать симлинки из merged.
 
-Пример для страницы ```index```
+Пример для страницы `index`
 
-```bash
-ln -s /desktop.bundles/merged/img  desktop.bundles/index/img
-```
+    ln -s /desktop.bundles/merged/img  desktop.bundles/index/img
