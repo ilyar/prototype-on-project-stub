@@ -2,8 +2,8 @@
     block: 'page',
     title: 'portfolio',
     head: [
-        { elem: 'css', url: '_portfolio.css', ie: false },
-        { elem: 'css', url: '_portfolio', ie: true }
+        { elem: 'css', url: '../assets/_assets.css', ie: false },
+        { elem: 'css', url: '../assets/_assets', ie: true }
     ],
     content: [
         {
@@ -23,6 +23,6 @@
         {
             block: 'footer'
         },
-        { elem: 'js', url:'_portfolio.js' }
+        { elem: 'js', url:'../assets/_assets.js' }
     ]
 })

@@ -2,8 +2,8 @@
     block: 'page',
     title: 'feedback',
     head: [
-        { elem: 'css', url: '_feedback.css', ie: false },
-        { elem: 'css', url: '_feedback', ie: true }
+        { elem: 'css', url: '../assets/_assets.css', ie: false },
+        { elem: 'css', url: '../assets/_assets', ie: true }
     ],
     content: [
         {
@@ -23,6 +23,6 @@
         {
             block: 'footer'
         },
-        { elem: 'js', url:'_feedback.js' }
+        { elem: 'js', url:'../assets/_assets.js' }
     ]
 })

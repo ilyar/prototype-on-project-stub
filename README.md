@@ -47,10 +47,4 @@
 
 index-страница будет доступна по адресу <a href="http://localhost:8080/desktop.bundles/index/index.html">http://localhost:8080/desktop.bundles/index/index.html</a>
 
-Контентные картинки хранятся в `/desktop.bundles/merged/img`.
-
-Чтобы не копивать их в каждую папку бандла, можно делать симлинки из merged.
-
-Пример для страницы `index`
-
-    ln -s /desktop.bundles/merged/img  desktop.bundles/index/img
+Контентные картинки хранятся в `/desktop.bundles/assets/img`.

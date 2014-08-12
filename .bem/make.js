@@ -81,3 +81,17 @@ MAKE.decl('AutoprefixerNode', {
     }
 
 });
+
+MAKE.decl('BundlesLevelNode', {
+
+    buildMergedBundle: function() {
+        if (this.getLevelPath() === 'desktop.bundles') return true;
+
+        return false;
+    },
+
+    mergedBundleName: function() {
+        return 'assets';
+    }
+
+});

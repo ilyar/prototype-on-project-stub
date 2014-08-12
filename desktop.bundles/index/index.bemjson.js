@@ -3,8 +3,8 @@
     title: 'Главная страница',
     favicon: '/favicon.ico',
     head: [
-        { elem: 'css', url: '_index.css', ie: false },
-        { elem: 'css', url: '_index', ie: true },
+        { elem: 'css', url: '../assets/_assets.css', ie: false },
+        { elem: 'css', url: '../assets/_assets', ie: true },
         { elem: 'meta', attrs: { name: 'description', content: '' }}
     ],
     content:[
@@ -27,6 +27,6 @@
         {
             block: 'footer'
         },
-        { elem: 'js', url: '_index.js' }
+        { elem: 'js', url: '../assets/_assets.js' }
     ]
 })
